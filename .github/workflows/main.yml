@@ -16,7 +16,7 @@ jobs:
           distribution: 'adopt'
           cache: gradle
 
-      - name: Running gradle assembleDebug
+      - name: Running gradle assemble
         run: gradle assembleDebug
 
       - name: Uploading Debug Tpk and Files
