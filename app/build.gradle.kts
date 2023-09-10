@@ -22,11 +22,11 @@ android {
     }
 
     sourceSets {
-        getByName("main") {
+        named("main") {
             java.srcDirs("src/main/kotlin")/* resources.srcDirs("src/main/res")*/
 
         }
-        getByName("test") {
+        named("test") {
             java.srcDirs("src/test/kotlin")
             resources.srcDirs("src/test/resources")
         }
@@ -114,7 +114,7 @@ project.afterEvaluate {
 
         val variant = this
 
-        val variantsName = variant.name.capitalize()
+        val variantsName = variant.name
 
         val installPluginTask = tasks.create("install${variantsName}Plugin") {
 
